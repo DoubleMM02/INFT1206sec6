@@ -94,9 +94,21 @@ a:focus {
   text-decoration: none;
 }
 
+a:focus {
+  outline: none;
+}
+
 a:active {
   background: black;
   text-decoration: underline;
+}
+
+
+a[href*="http"] {
+  background: url('./icon/external-link-52.png') no-repeat;
+  background-size: 1rem;
+  background-position: bottom 0.1rem right;
+  padding-right: 1.2rem;
 }
 
 ul {
