@@ -64,3 +64,13 @@ body{
   letter-spacing: 0.02rem;
   word-spacing: 0.01rem;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+h1{
+  text-align: center;
+  font-size: 2.5rem;
+}
