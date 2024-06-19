@@ -57,3 +57,8 @@ body {
     grid-row: 1;
     width: 100%;
   }
+  aside{
+    grid-column: 5;
+    grid-row: 1;
+    width: 100%;
+  }
