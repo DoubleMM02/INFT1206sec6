@@ -51,3 +51,9 @@ body {
   .feature {
       width: 200px;
   }
+
+  article{
+    grid-column: 1/5;
+    grid-row: 1;
+    width: 100%;
+  }
