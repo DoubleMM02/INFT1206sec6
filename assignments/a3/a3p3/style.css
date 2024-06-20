@@ -71,16 +71,16 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.05em;
 }
 
-h1{
+h1 {
   text-align: center;
   font-size: 5rem;
 }
 
-h2, h3, h4, h5, h6{
+h2, h3, h4, h5, h6 {
   font-size: 3rem;
 }
 
-p{
+p {
   text-indent: 20px;
 }
 
