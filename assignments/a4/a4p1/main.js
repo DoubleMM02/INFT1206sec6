@@ -18,6 +18,12 @@ function result() {
   let newStory = storyText;
   
   const xItem = randomValueFromArray(insertX);
+  const yItem = randomValueFromArray(insertY);
+  const zItem = randomValueFromArray(insertZ);
+
+  newStory = newStory.replaceAll(':insertx:', xItem)
+  newStory = newStory.replaceAll(':inserty:', xItem)
+  newStory = newStory.replaceAll(':insertz:', xItem)
 
   if(customName.value !== '') {
     const name = customName.value;
