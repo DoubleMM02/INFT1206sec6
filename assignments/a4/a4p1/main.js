@@ -7,17 +7,9 @@ function randomValueFromArray(array){
   return array[random];
 }
 
-2. RAW TEXT STRINGS
-
-It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.
-
-Willy the Goblin
-Big Daddy
-Father Christmas
-
-the soup kitchen
-Disneyland
-the White House
+const storyText = 'It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
+const insertX = ['Willy the Goblin', 'Big Daddy', 'Father Christmas'];
+const insertY = ['the soup kitchen', 'Disneyland', 'the White House'];
 
 spontaneously combusted
 melted into a puddle on the sidewalk
