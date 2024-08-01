@@ -23,7 +23,9 @@ class Ball {
     this.x = x;
     this.x = y;
     this.x = velX;
-    this.x = x;
-    this.x = x;
-    this.x = x;
+    this.x = velY;
+    this.x = color;
+    this.x = size;
   }
+
+  
