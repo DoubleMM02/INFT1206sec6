@@ -103,25 +103,37 @@ draw() {
   ctx.stroke();
   }
 
-  pdate() {
+  checkbounds() {
   if (this.x + this.size >= width) {
-    this.velX = -Math.abs(this.velX);
+    this.x = width - this.size;
   }
 
   if (this.x - this.size <= 0) {
-    this.velX = Math.abs(this.velX);
+    this.x = this.size;
   }
 
   if (this.y + this.size >= height) {
-    this.velY = -Math.abs(this.velY);
+    this.y = height - this.size;
   }
 
   if (this.y - this.size <= 0) {
-    this.velY = Math.abs(this.velY);
+    this.y = this.size;
   }
+}
 
-  this.x += this.velX;
-  this.y += this.velY;
+collisionDetect() {
+  for (const ball of balls) {
+    if (!(this === ball) && ball.exists) {
+      const dx = this.x - ball.x;
+      const dy = this.y - ball.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < this.size + ball.size) {
+        ball.color = this.color = randomRGB();
+      }
+    }
+  }
+}
 }
 
 const balls = [];
