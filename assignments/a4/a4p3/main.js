@@ -21,7 +21,9 @@ function randomRGB() {
 class Ball {
   constructor(x, y, velX, velY, color, size) {
     this.x = x;
+    this.x = y;
+    this.x = velX;
     this.x = x;
     this.x = x;
-
+    this.x = x;
   }
