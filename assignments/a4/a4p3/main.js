@@ -30,7 +30,7 @@ class Ball {
 
   draw() {
     ctx.beginPath();
-    ctx.beginPath();
-    ctx.beginPath();
-    ctx.beginPath();
+    ctx.fillStyle = this.color;
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.fill();
   }
