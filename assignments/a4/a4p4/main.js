@@ -70,6 +70,13 @@ class Ball {
     }
   }
 
+
+class EvilCircle extends Shape {
+  constructor(x, y) {
+    super(x, y, 20, 20);
+    this.color = "white";
+    this.size = 10;
+
 const balls = [];
 
 while (balls.length < 25) {
