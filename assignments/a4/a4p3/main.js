@@ -88,3 +88,8 @@ function loop() {
 }
 
 loop();
+
+collisionDetect() {
+  for (const ball of balls) {
+    if (this !== ball) {
+    }
