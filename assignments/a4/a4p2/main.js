@@ -6,12 +6,12 @@ const overlay = document.querySelector('.overlay');
 /* Declaring the array of image filenames */
 
 const imageFiles = ["pic1.jpg, pic2.jpg", "pic3.jpg", "pic4.jpg", "pic5.jpg"]
+const alts = {
+    'pic1.jpg' : 'Closeup of the human eye',
+    'pic2.jpg' : 'A Rock that looks like a wave',
+}
 
 /* Declaring the alternative text for each image file */
-
-imageFiles.forEach((fileName) => {
-const newImage = document.createElement('imng')
-}
 
 /* Looping through images */
 
