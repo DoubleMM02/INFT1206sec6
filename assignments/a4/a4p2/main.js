@@ -9,6 +9,10 @@ const imageFiles = ["pic1.jpg, pic2.jpg", "pic3.jpg", "pic4.jpg", "pic5.jpg"]
 
 /* Declaring the alternative text for each image file */
 
+imageFiles.forEach((fileName) => {
+const newImage = document.createElement('imng')
+}
+
 /* Looping through images */
 
 const newImage = document.createElement('img');
