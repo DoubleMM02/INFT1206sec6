@@ -76,8 +76,18 @@ class EvilCircle extends Shape {
     super(x, y, 20, 20);
     this.color = "white";
     this.size = 10;
+    case "a":
+      this.X -= this.velX
+    case "a":
+      this.X -= this.velX
+    case "a":
+      this.X -= this.velX
+    case "a":
+            this.X -= this.velX
 
-const balls = [];
+
+
+    const balls = [];
 
 while (balls.length < 25) {
   const size = random(10, 20);
