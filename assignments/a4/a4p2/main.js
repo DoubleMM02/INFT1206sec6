@@ -24,6 +24,10 @@ const newImage = document.createElement('img');
 newImage.setAttribute('src', `images/${image}`);
 newImage.setAttribute('alt', alts[image]);
 thumbBar.appendChild(newImage);
+newImage.addEventListener('click', e => {
+    displayedImage.src = e.target.src;
+    displayedImage.alt = e.target.alt;
+  });
 }
 
 /* Wiring up the Darken/Lighten button */
