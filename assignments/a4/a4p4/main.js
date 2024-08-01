@@ -1,5 +1,4 @@
 // setup canvas
-
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -7,17 +6,26 @@ const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
 // function to generate random number
-
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 // function to generate random color
-
 function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
+// Shape class
+class Shape {
+  constructor(x, y, velX, velY) {
+    this.x = x;
+    this.y = y;
+    this.velX = velX;
+    this.velY = velY;
+  }
+}
+
+// Ball Class 
 class Ball {
   constructor(x, y, velX, velY, color, size) {
     this.x = x;
@@ -71,6 +79,7 @@ class Ball {
   }
 }
 
+// EvilCircle class
 class EvilCircle extends Shape {
   constructor(x, y) {
     super(x, y, 20, 20);
@@ -138,7 +147,14 @@ draw() {
   }
 }
 
+// Ball management
 const balls = [];
+let ballCount = 0;
+const ballCountElement = document.getElementById("ballCount");
+
+function updateBallCount() {
+  ballCountElement.textContent = ballCount;
+}
 
 while (balls.length < 25) {
   const size = random(10, 20);
@@ -154,17 +170,30 @@ while (balls.length < 25) {
   );
 
   balls.push(ball);
+  ballCount++;
 }
+
+updateBallCount();
+
+let evilCircle = new EvilCircle(random(0, width), random(0, height));
 
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
-    ball.draw();
-    ball.update();
-    ball.collisionDetect();
+    if (ball.exists) {
+      ball.draw();
+      ball.update();
+      ball.collisionDetect();
+    }
   }
+
+  evilCircle.draw();
+  evilCircle.checkBounds();
+  evilCircle.collisionDetect();
+
+  evilCircle = new EvilCircle(random(0, width), random(0, height));
 
   requestAnimationFrame(loop);
 }
