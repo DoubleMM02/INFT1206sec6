@@ -28,4 +28,9 @@ class Ball {
     this.x = size;
   }
 
-  
+  draw() {
+    ctx.beginPath();
+    ctx.beginPath();
+    ctx.beginPath();
+    ctx.beginPath();
+  }
