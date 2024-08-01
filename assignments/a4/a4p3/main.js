@@ -56,3 +56,11 @@ class Ball {
   this.x += this.velY;
 
 }
+
+const balls = [];
+
+while (balls.lenght < 25) {
+  const size = random (10, 20);
+    // ball position always drawn at least one ball width
+    // away from the edge of the canvas, to avoid drawing errors
+}
