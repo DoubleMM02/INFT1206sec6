@@ -22,6 +22,8 @@ function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
+// Shape Class
+
 class Shape {
   constructor(x, y, velX, velY) {
     this.x = x;
@@ -31,6 +33,8 @@ class Shape {
   }
 
 }
+
+// Updated Ball Class
 
 class Ball extends Shape {
 
@@ -86,6 +90,8 @@ class Ball extends Shape {
   }
 
 }
+
+// EvilCircle Class
 
 class EvilCircle extends Shape {
 
@@ -157,6 +163,8 @@ class EvilCircle extends Shape {
 
 }
 
+// Array for all the balls
+
 const balls = [];
 
 while (balls.length < 25) {
@@ -177,6 +185,8 @@ while (balls.length < 25) {
 }
 
 const evilBall = new EvilCircle(random(0, width), random(0, height));
+
+// Funtion for looping the animation
 
 function loop() {
   ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
