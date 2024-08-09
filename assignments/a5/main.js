@@ -4,9 +4,11 @@ const showHideBtn = document.querySelector('.show-hide');
 const commentWrapper = document.querySelector('.comment-wrapper');
 
 // Initialize comments section as hidden
+
 commentWrapper.style.display = 'none';
 
 // Toggle comment section visibility using event handler
+
 showHideBtn.onclick = function() {
     if (commentWrapper.style.display === 'none') {
         commentWrapper.style.display = 'block';
@@ -26,12 +28,11 @@ const list = document.querySelector('.comment-container');
 
 // Event handler for form submission
 form.onsubmit = function(e) {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault();
     submitComment();
 };
 
 function submitComment() {
-    // Check for empty input fields before adding a comment
     if (nameField.value.trim() !== '' && commentField.value.trim() !== '') {
         const listItem = document.createElement('li');
         const namePara = document.createElement('p');
@@ -44,7 +45,6 @@ function submitComment() {
         listItem.appendChild(commentPara);
         list.appendChild(listItem);
 
-        // Clear input fields after submission
         nameField.value = '';
         commentField.value = '';
     } else {
